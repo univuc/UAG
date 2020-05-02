@@ -1,14 +1,14 @@
 /**
- * This file is part of Univuc/{appname}.
+ * This file is part of Univuc/UAG.
  *
  * Copyright (C) 2020 Univuc <potados99@gmail.com>
  *
- * Univuc/{appname}is free software: you can redistribute it and/or modify
+ * Univuc/UAG is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Univuc/{appname} is distributed in the hope that it will be useful,
+ * Univuc/UAG is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -20,12 +20,30 @@
 import getEnv from './lib/common/utils/env';
 
 export default {
-    port: getEnv('{appname}_PORT') || 21100,
+    ports: {
+        uag_rest: getEnv('UAG_PORT_REST') || 21100,
+        uag_slack: get('UAG_PORT_SLACK') || 21101,
 
-    slack_token: getEnv('{appname}_SLACK_TOKEN') || 'token',
-    slack_signing_secret: getEnv('{appname}_SLACK_SIGNING_SECRET') || 'secret',
+        uas: getEnv('UAS_PORT'),
+        lms: getEnv('LMS_PORT'),
+        snl: getEnv('SNL_PORT'),
+        aicro: getEnv('AICRO_PORT'),
+    },
 
-    web_id: getEnv('{appname}_WEB_ID') || 'master',
-    web_pw: getEnv('{appname}_WEB_PW') || '1234',
+    endpoints: {
+        get_user_by_user_id: {
+            port: getEnv('UIP_PORT'),
+            path: '/get-user-by-user-id',
+        },
+        get_user_by_slack_user_id: {
+            port: getEnv('UIP_PORT'),
+            path: '/get-user-by-slack-user-id',
+        },
+    },
+
+    secrets: {
+        sso: getEnv('UNIVUC_SSO_SECRET') || 'token',
+        slack_signing: getEnv('SLACK_SIGNING_SECRET') || 'secret',
+    },
 };
 

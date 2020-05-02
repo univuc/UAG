@@ -1,14 +1,14 @@
 /**
- * This file is part of Univuc/{appname}.
+ * This file is part of Univuc/UAG.
  *
  * Copyright (C) 2020 Univuc <potados99@gmail.com>
  *
- * Univuc/{appname}is free software: you can redistribute it and/or modify
+ * Univuc/UAG is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Univuc/{appname} is distributed in the hope that it will be useful,
+ * Univuc/UAG is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -17,12 +17,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import createServer from './lib/infrastructure/webserver/server';
+import setRestGateway from './lib/clients/rest/server';
+import setSlackGateway from './lib/clients/slack/server';
 
-async function start() {
-    const server = await createServer();
+function start() {
+    // Start REST API proxy server
+    setRestGateway();
 
-    server.start();
+    // Start slackbot server
+    setSlackGateway();
 }
 
 start();

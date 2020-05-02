@@ -6,7 +6,7 @@
 
 ## Features
 
-UAG is an entry point for Univ UC services.    
+UAG is an API entry point for Univ UC services.    
 It supports both REST API and slack command.
 
 ### Authentication

@@ -1,5 +1,5 @@
 {
-  "name": "{appname}",
+  "name": "uag",
   "version": "1.0.0",
   "description": "{description}",
   "main": "index.mjs",
@@ -9,27 +9,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/univuc/{appname}.git"
+    "url": "git+https://github.com/univuc/UAG.git"
   },
   "keywords": [
-    "{appname}"
+    "UAG"
   ],
   "author": "potados99",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/univuc/{appname}/issues"
+    "url": "https://github.com/univuc/UAG/issues"
   },
-  "homepage": "https://github.com/univuc/{appname}#readme",
+  "homepage": "https://github.com/univuc/UAG#readme",
   "dependencies": {
     "@hapi/basic": "^6.0.0",
     "@hapi/boom": "^9.1.0",
     "@hapi/hapi": "^19.1.1",
     "@hapi/inert": "^6.0.1",
     "@slack/web-api": "^5.8.0",
+    "axios": "^0.19.2",
     "axios-cookiejar-support": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "crypto": "^1.0.1",
     "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
     "minimist": "latest",
+    "qs": "^6.9.3",
     "redis": "^3.0.2",
     "stack-trace": "0.0.10",
     "tough-cookie": "^4.0.0",
