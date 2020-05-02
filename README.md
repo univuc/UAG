@@ -1,8 +1,26 @@
-# Template
-A template repository for Node.js app.
+# UAG
 
-## Quick start
+**Universal API Gateway**
 
-Select `Use this template` at the menu bar.
+> This project is part of [Univ UC](https://github.com/univuc).
 
-Replace every occurrences of `{appname}` and `{description}` to your project's name and description.
+## Features
+
+UAG is an entry point for Univ UC services.    
+It supports both REST API and slack command.
+
+### Authentication
+
+Authentication is a generic thing. It is separated from domain.    
+UAG takes this part for other services.
+Every incoming request(but `login` or `register`) should have a valid JWT signed by `UAS`.
+
+### Re-route
+
+UAG forwards a request to a proper service.
+
+### Transform
+
+For some clients, like slack, their requests should be transformed or newly created to fit in the service's REST API.    
+
+
