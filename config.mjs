@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import getEnv from './lib/common/utils/env';
+import getEnv from 'iab/lib/utils/env';
 
 export default {
     ports: {
