@@ -22,23 +22,12 @@ import getEnv from './lib/common/utils/env';
 export default {
     ports: {
         uag_rest: getEnv('UAG_PORT_REST') || 21100,
-        uag_slack: get('UAG_PORT_SLACK') || 21101,
+        uag_slack: getEnv('UAG_PORT_SLACK') || 21101,
 
         uas: getEnv('UAS_PORT'),
         lms: getEnv('LMS_PORT'),
         snl: getEnv('SNL_PORT'),
         aicro: getEnv('AICRO_PORT'),
-    },
-
-    endpoints: {
-        get_user_by_user_id: {
-            port: getEnv('UIP_PORT'),
-            path: '/get-user-by-user-id',
-        },
-        get_user_by_slack_user_id: {
-            port: getEnv('UIP_PORT'),
-            path: '/get-user-by-slack-user-id',
-        },
     },
 
     secrets: {
