@@ -17,8 +17,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import setRestGateway from './lib/clients/rest/server';
-import setSlackGateway from './lib/clients/slack/server';
+import setRestGateway from './lib/entries/rest/server';
+import setSlackGateway from './lib/entries/slack/server';
 
 function start() {
     // Start REST API proxy server
