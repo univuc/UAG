@@ -1,7 +1,7 @@
 {
   "name": "uag",
   "version": "1.0.0",
-  "description": "{description}",
+  "description": "Universal API Gateway",
   "main": "index.mjs",
   "scripts": {
     "start": "node -r esm index.mjs",
