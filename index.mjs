@@ -17,6 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import setInternalAuth from './lib/entries/common/server';
 import setSlackGateway from './lib/entries/slack/server';
 import setRestGateway from './lib/entries/rest/server';
 import express from 'express';
@@ -24,6 +25,9 @@ import config from './config';
 
 function start() {
     const app = express();
+
+    // Order matters.
+    setInternalAuth(app);
 
     setRestGateway(app);
     setSlackGateway(app);
