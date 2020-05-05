@@ -21,8 +21,7 @@ import getEnv from 'iab/lib/utils/env';
 
 export default {
     ports: {
-        uag_rest: getEnv('UAG_PORT_REST'),
-        uag_slack: getEnv('UAG_PORT_SLACK'),
+        uag: getEnv('UAG_PORT'),
 
         uas: getEnv('UAS_PORT'),
         lms: getEnv('LMS_PORT'),
